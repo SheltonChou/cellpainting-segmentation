@@ -1,0 +1,104 @@
+{
+  "aug_no_augmentation": {
+    "mean_iou": 0.8192,
+    "std_iou": 0.1425,
+    "f1_05": 0.9604,
+    "f1_07": 0.8911
+  },
+  "aug_geometric_only": {
+    "mean_iou": 0.845,
+    "std_iou": 0.1308,
+    "f1_05": 0.9703,
+    "f1_07": 0.9109
+  },
+  "aug_geometric_and_intensity": {
+    "mean_iou": 0.8315,
+    "std_iou": 0.1375,
+    "f1_05": 0.9703,
+    "f1_07": 0.9208
+  },
+  "tl_full_finetune_budget40": {
+    "mean_iou": 0.758,
+    "std_iou": 0.1793,
+    "f1_05": 0.9307,
+    "f1_07": 0.8218
+  },
+  "tl_frozen_backbone_budget40": {
+    "mean_iou": 0.7211,
+    "std_iou": 0.1784,
+    "f1_05": 0.9307,
+    "f1_07": 0.7129
+  },
+  "tl_partial_finetune_budget40": {
+    "mean_iou": 0.7493,
+    "std_iou": 0.1773,
+    "f1_05": 0.9307,
+    "f1_07": 0.7624
+  },
+  "tl_full_finetune_budget100": {
+    "mean_iou": 0.8081,
+    "std_iou": 0.1578,
+    "f1_05": 0.9406,
+    "f1_07": 0.8812
+  },
+  "tl_frozen_backbone_budget100": {
+    "mean_iou": 0.7927,
+    "std_iou": 0.1792,
+    "f1_05": 0.9307,
+    "f1_07": 0.8614
+  },
+  "tl_partial_finetune_budget100": {
+    "mean_iou": 0.8124,
+    "std_iou": 0.1483,
+    "f1_05": 0.9406,
+    "f1_07": 0.8713
+  },
+  "tl_full_finetune_budget250": {
+    "mean_iou": 0.8264,
+    "std_iou": 0.1417,
+    "f1_05": 0.9406,
+    "f1_07": 0.901
+  },
+  "tl_frozen_backbone_budget250": {
+    "mean_iou": 0.8199,
+    "std_iou": 0.1423,
+    "f1_05": 0.9505,
+    "f1_07": 0.901
+  },
+  "tl_partial_finetune_budget250": {
+    "mean_iou": 0.8255,
+    "std_iou": 0.147,
+    "f1_05": 0.9307,
+    "f1_07": 0.9109
+  },
+  "tl_full_finetune_budget500": {
+    "mean_iou": 0.8491,
+    "std_iou": 0.1307,
+    "f1_05": 0.9703,
+    "f1_07": 0.9109
+  },
+  "tl_frozen_backbone_budget500": {
+    "mean_iou": 0.8346,
+    "std_iou": 0.1392,
+    "f1_05": 0.9703,
+    "f1_07": 0.9208
+  },
+  "tl_partial_finetune_budget500": {
+    "mean_iou": 0.8388,
+    "std_iou": 0.1376,
+    "f1_05": 0.9703,
+    "f1_07": 0.9208
+  },
+  "combined_geometric_only": {
+    "mean_iou": 0.8247,
+    "std_iou": 0.1445,
+    "f1_05": 0.9604,
+    "f1_07": 0.901
+  },
+  "combined_geometric_and_intensity": {
+    "mean_iou": 0.8294,
+    "std_iou": 0.1427,
+    "f1_05": 0.9604,
+    "f1_07": 0.901
+  }
+}

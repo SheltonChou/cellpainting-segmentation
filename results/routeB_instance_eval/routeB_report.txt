@@ -1,0 +1,158 @@
+ROUTE B INSTANCE-LEVEL RE-EVALUATION
+============================================================
+DSB directory: data/dsb2018/stage1_train
+Device: mps
+Split: {'n_total': 670, 'n_train_by_code': 468, 'n_val_by_code': 101, 'n_test_by_code': 101, 'train_end': 468, 'val_end': 569}
+
+aug_no_augmentation
+  binary IoU mean: 0.8214
+  instance F1@0.50: 0.7046
+  instance F1@0.70: 0.5670
+  mean instance F1@0.50:0.95: 0.4755
+  AP@0.50: 0.5707
+  AP@0.75: 0.3597
+  mAP@0.50:0.95: 0.3431
+
+aug_geometric_only
+  binary IoU mean: 0.8473
+  instance F1@0.50: 0.7165
+  instance F1@0.70: 0.6059
+  mean instance F1@0.50:0.95: 0.5109
+  AP@0.50: 0.5871
+  AP@0.75: 0.4221
+  mAP@0.50:0.95: 0.3824
+
+aug_geometric_and_intensity
+  binary IoU mean: 0.8339
+  instance F1@0.50: 0.7122
+  instance F1@0.70: 0.5881
+  mean instance F1@0.50:0.95: 0.4944
+  AP@0.50: 0.5796
+  AP@0.75: 0.3959
+  mAP@0.50:0.95: 0.3663
+
+tl_full_finetune_budget40
+  binary IoU mean: 0.7591
+  instance F1@0.50: 0.5834
+  instance F1@0.70: 0.4793
+  mean instance F1@0.50:0.95: 0.3808
+  AP@0.50: 0.4452
+  AP@0.75: 0.2743
+  mAP@0.50:0.95: 0.2576
+
+tl_frozen_backbone_budget40
+  binary IoU mean: 0.7220
+  instance F1@0.50: 0.5611
+  instance F1@0.70: 0.4239
+  mean instance F1@0.50:0.95: 0.3346
+  AP@0.50: 0.4097
+  AP@0.75: 0.1972
+  mAP@0.50:0.95: 0.2109
+
+tl_partial_finetune_budget40
+  binary IoU mean: 0.7500
+  instance F1@0.50: 0.5714
+  instance F1@0.70: 0.4593
+  mean instance F1@0.50:0.95: 0.3647
+  AP@0.50: 0.4014
+  AP@0.75: 0.2328
+  mAP@0.50:0.95: 0.2257
+
+tl_full_finetune_budget100
+  binary IoU mean: 0.8097
+  instance F1@0.50: 0.6632
+  instance F1@0.70: 0.5631
+  mean instance F1@0.50:0.95: 0.4623
+  AP@0.50: 0.5000
+  AP@0.75: 0.3396
+  mAP@0.50:0.95: 0.3120
+
+tl_frozen_backbone_budget100
+  binary IoU mean: 0.7940
+  instance F1@0.50: 0.6565
+  instance F1@0.70: 0.5390
+  mean instance F1@0.50:0.95: 0.4485
+  AP@0.50: 0.5155
+  AP@0.75: 0.3412
+  mAP@0.50:0.95: 0.3189
+
+tl_partial_finetune_budget100
+  binary IoU mean: 0.8141
+  instance F1@0.50: 0.6731
+  instance F1@0.70: 0.5608
+  mean instance F1@0.50:0.95: 0.4641
+  AP@0.50: 0.5171
+  AP@0.75: 0.3471
+  mAP@0.50:0.95: 0.3164
+
+tl_full_finetune_budget250
+  binary IoU mean: 0.8284
+  instance F1@0.50: 0.6991
+  instance F1@0.70: 0.5790
+  mean instance F1@0.50:0.95: 0.4873
+  AP@0.50: 0.5605
+  AP@0.75: 0.3882
+  mAP@0.50:0.95: 0.3596
+
+tl_frozen_backbone_budget250
+  binary IoU mean: 0.8220
+  instance F1@0.50: 0.6868
+  instance F1@0.70: 0.5709
+  mean instance F1@0.50:0.95: 0.4755
+  AP@0.50: 0.5521
+  AP@0.75: 0.3757
+  mAP@0.50:0.95: 0.3491
+
+tl_partial_finetune_budget250
+  binary IoU mean: 0.8272
+  instance F1@0.50: 0.6885
+  instance F1@0.70: 0.5669
+  mean instance F1@0.50:0.95: 0.4834
+  AP@0.50: 0.5460
+  AP@0.75: 0.3876
+  mAP@0.50:0.95: 0.3522
+
+tl_full_finetune_budget500
+  binary IoU mean: 0.8512
+  instance F1@0.50: 0.7252
+  instance F1@0.70: 0.6264
+  mean instance F1@0.50:0.95: 0.5257
+  AP@0.50: 0.5949
+  AP@0.75: 0.4354
+  mAP@0.50:0.95: 0.3928
+
+tl_frozen_backbone_budget500
+  binary IoU mean: 0.8367
+  instance F1@0.50: 0.7112
+  instance F1@0.70: 0.5948
+  mean instance F1@0.50:0.95: 0.5010
+  AP@0.50: 0.5824
+  AP@0.75: 0.4173
+  mAP@0.50:0.95: 0.3773
+
+tl_partial_finetune_budget500
+  binary IoU mean: 0.8410
+  instance F1@0.50: 0.7200
+  instance F1@0.70: 0.5968
+  mean instance F1@0.50:0.95: 0.5024
+  AP@0.50: 0.5976
+  AP@0.75: 0.4196
+  mAP@0.50:0.95: 0.3817
+
+combined_geometric_only
+  binary IoU mean: 0.8273
+  instance F1@0.50: 0.7098
+  instance F1@0.70: 0.5850
+  mean instance F1@0.50:0.95: 0.4943
+  AP@0.50: 0.5868
+  AP@0.75: 0.4110
+  mAP@0.50:0.95: 0.3810
+
+combined_geometric_and_intensity
+  binary IoU mean: 0.8320
+  instance F1@0.50: 0.7119
+  instance F1@0.70: 0.5944
+  mean instance F1@0.50:0.95: 0.5012
+  AP@0.50: 0.5949
+  AP@0.75: 0.4149
+  mAP@0.50:0.95: 0.3852

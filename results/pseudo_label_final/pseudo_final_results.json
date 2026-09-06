@@ -1,0 +1,167 @@
+{
+  "0.5": [
+    {
+      "round": 0,
+      "val_iou": 0.8757229539064261,
+      "agreement_rate": 0.8355835193285263,
+      "n_pseudo": 0,
+      "accept_rate": 0.0
+    },
+    {
+      "round": 1,
+      "val_iou": 0.8639758091706496,
+      "agreement_rate": 0.827340427685191,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9451314851045608
+    },
+    {
+      "round": 2,
+      "val_iou": 0.8661885123986465,
+      "agreement_rate": 0.8361366172325283,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.940593819141388
+    },
+    {
+      "round": 3,
+      "val_iou": 0.8697651441280658,
+      "agreement_rate": 0.8237918696898123,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9689703888893128
+    }
+  ],
+  "0.6": [
+    {
+      "round": 0,
+      "val_iou": 0.8772359261145959,
+      "agreement_rate": 0.8406659730911561,
+      "n_pseudo": 0,
+      "accept_rate": 0.0
+    },
+    {
+      "round": 1,
+      "val_iou": 0.8682443682964032,
+      "agreement_rate": 0.8305178432313808,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9425738062858582
+    },
+    {
+      "round": 2,
+      "val_iou": 0.8676107755074134,
+      "agreement_rate": 0.8254631947036316,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.946408799290657
+    },
+    {
+      "round": 3,
+      "val_iou": 0.8705012798309326,
+      "agreement_rate": 0.832111367014612,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9749785046577454
+    }
+  ],
+  "0.7": [
+    {
+      "round": 0,
+      "val_iou": 0.8754153480896583,
+      "agreement_rate": 0.8452522377397458,
+      "n_pseudo": 0,
+      "accept_rate": 0.0
+    },
+    {
+      "round": 1,
+      "val_iou": 0.8612271959965045,
+      "agreement_rate": 0.833624721478193,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9424327166080475
+    },
+    {
+      "round": 2,
+      "val_iou": 0.8664242671086237,
+      "agreement_rate": 0.8309417416981318,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9302022956609726
+    },
+    {
+      "round": 3,
+      "val_iou": 0.8663729933591989,
+      "agreement_rate": 0.8241953119133744,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9731947069168091
+    }
+  ],
+  "0.8": [
+    {
+      "round": 0,
+      "val_iou": 0.8758810987839332,
+      "agreement_rate": 0.8375502131695702,
+      "n_pseudo": 0,
+      "accept_rate": 0.0
+    },
+    {
+      "round": 1,
+      "val_iou": 0.8650573904697711,
+      "agreement_rate": 0.8323957550578902,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9372166681289673
+    },
+    {
+      "round": 2,
+      "val_iou": 0.8644714768116291,
+      "agreement_rate": 0.8296975704318607,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9436560410261154
+    },
+    {
+      "round": 3,
+      "val_iou": 0.8697586930715121,
+      "agreement_rate": 0.8334036194366987,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9727425687313079
+    }
+  ],
+  "0.9": [
+    {
+      "round": 0,
+      "val_iou": 0.8789988939578717,
+      "agreement_rate": 0.8454578482574532,
+      "n_pseudo": 0,
+      "accept_rate": 0.0
+    },
+    {
+      "round": 1,
+      "val_iou": 0.86572488454672,
+      "agreement_rate": 0.8357006744723088,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9525160678625106
+    },
+    {
+      "round": 2,
+      "val_iou": 0.8676719527978164,
+      "agreement_rate": 0.8265604614757257,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9437670743465424
+    },
+    {
+      "round": 3,
+      "val_iou": 0.8693785117222712,
+      "agreement_rate": 0.8342555353796522,
+      "n_pseudo": 500,
+      "accept_rate": 100.0,
+      "mean_confidence": 0.9783748766183853
+    }
+  ]
+}

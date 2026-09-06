@@ -1,0 +1,19 @@
+Method,Config,Budget,Val IoU,Test IoU,F1@0.5,F1@0.7,mAP
+Cellpose (baseline),-,N/A,0.559,-,0.6706,0.4782,-
+U-Net + ResNet50,no_augmentation,Full,0.8657,0.8192,0.9604,0.8911,0.697
+U-Net + ResNet50,geometric_only,Full,0.8745,0.845,0.9703,0.9109,0.7525
+U-Net + ResNet50,geometric_and_intensity,Full,0.8697,0.8315,0.9703,0.9208,0.7208
+U-Net + ResNet50,full_finetune,40,0.7791,0.758,0.9307,0.8218,0.604
+U-Net + ResNet50,frozen_backbone,40,0.7567,0.7211,0.9307,0.7129,0.5307
+U-Net + ResNet50,partial_finetune,40,0.7708,0.7493,0.9307,0.7624,0.5861
+U-Net + ResNet50,full_finetune,100,0.8132,0.8081,0.9406,0.8812,0.6871
+U-Net + ResNet50,frozen_backbone,100,0.8325,0.7927,0.9307,0.8614,0.6713
+U-Net + ResNet50,partial_finetune,100,0.8103,0.8124,0.9406,0.8713,0.6921
+U-Net + ResNet50,full_finetune,250,0.8423,0.8264,0.9406,0.901,0.7099
+U-Net + ResNet50,frozen_backbone,250,0.8522,0.8199,0.9505,0.901,0.7
+U-Net + ResNet50,partial_finetune,250,0.829,0.8255,0.9307,0.9109,0.7149
+U-Net + ResNet50,full_finetune,500,0.8652,0.8491,0.9703,0.9109,0.7594
+U-Net + ResNet50,frozen_backbone,500,0.8559,0.8346,0.9703,0.9208,0.7347
+U-Net + ResNet50,partial_finetune,500,0.8555,0.8388,0.9703,0.9208,0.7356
+U-Net + Pseudo,geometric_only,Full,-,0.8247,0.9604,0.901,0.7158
+U-Net + Pseudo,geometric_and_intensity,Full,-,0.8294,0.9604,0.901,0.7198

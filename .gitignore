@@ -1,0 +1,38 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local datasets and archives
+data/*
+!data/README.md
+!data/CHECKSUMS.sha256
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+results/checkpoints/*
+!results/checkpoints/README.md
+
+# Local run metadata
+results/environment-freeze.txt
+*.log
+
+# Temporary files
+tmp/
+scratch/

@@ -1,0 +1,9 @@
+{
+  "none": 0.8674,
+  "flip_only": 0.8682,
+  "rotation_only": 0.8699,
+  "elastic_only": 0.867,
+  "blur_only": 0.8637,
+  "intensity_only": 0.8629,
+  "geometric_only": 0.8689
+}

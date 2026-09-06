@@ -1,0 +1,37 @@
+{
+  "wilcoxon_geo_vs_no": {
+    "statistic": 0.0,
+    "p_value": 0.0078,
+    "significant": true
+  },
+  "wilcoxon_int_vs_no": {
+    "statistic": 0.0,
+    "p_value": 0.0078,
+    "significant": true
+  },
+  "wilcoxon_geo_vs_int": {
+    "statistic": 3.0,
+    "p_value": 0.0391,
+    "significant": true
+  },
+  "wilcoxon_full_vs_frozen_budget250": {
+    "statistic": 0.0,
+    "p_value": 0.0078,
+    "significant": true
+  },
+  "wilcoxon_full_vs_partial_budget250": {
+    "statistic": 0.0,
+    "p_value": 0.0078,
+    "significant": true
+  },
+  "wilcoxon_full_vs_frozen_budget500": {
+    "statistic": 6.0,
+    "p_value": 0.1094,
+    "significant": false
+  },
+  "wilcoxon_full_vs_partial_budget500": {
+    "statistic": 5.0,
+    "p_value": 0.0781,
+    "significant": false
+  }
+}

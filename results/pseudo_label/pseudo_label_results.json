@@ -1,0 +1,37 @@
+{
+  "5": {
+    "min_cells": 5,
+    "accept_rate": 100.0,
+    "n_pseudo": 500,
+    "mean_cells_detected": 422.888,
+    "val_iou": 0.864486928169544
+  },
+  "10": {
+    "min_cells": 10,
+    "accept_rate": 100.0,
+    "n_pseudo": 500,
+    "mean_cells_detected": 422.888,
+    "val_iou": 0.8660859694847693
+  },
+  "20": {
+    "min_cells": 20,
+    "accept_rate": 100.0,
+    "n_pseudo": 500,
+    "mean_cells_detected": 422.888,
+    "val_iou": 0.8656067298008845
+  },
+  "50": {
+    "min_cells": 50,
+    "accept_rate": 100.0,
+    "n_pseudo": 500,
+    "mean_cells_detected": 422.888,
+    "val_iou": 0.8677066610409663
+  },
+  "100": {
+    "min_cells": 100,
+    "accept_rate": 99.0,
+    "n_pseudo": 495,
+    "mean_cells_detected": 422.888,
+    "val_iou": 0.8620995833323553
+  }
+}

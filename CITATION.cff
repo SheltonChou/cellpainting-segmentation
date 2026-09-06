@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "Cell Painting Instance Segmentation"
+type: software
+authors:
+  - family-names: Zhou
+    given-names: Shuaiyu
+repository-code: "https://github.com/SheltonChou/cellpainting-segmentation"
+version: 1.0.0
+date-released: 2026-09-07
+

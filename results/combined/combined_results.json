@@ -1,0 +1,19 @@
+{
+  "geo_aug_only": {
+    "val_iou": 0.8848207409565265,
+    "test_iou": 0.8630107457821186,
+    "n_pseudo": 0
+  },
+  "combined_geometric_only": {
+    "val_iou": 0.8716256068303034,
+    "test_iou": 0.8308960382754986,
+    "n_pseudo": 500,
+    "aug_group": "geometric_only"
+  },
+  "combined_geometric_and_intensity": {
+    "val_iou": 0.8718582162490258,
+    "test_iou": 0.8350827327141395,
+    "n_pseudo": 500,
+    "aug_group": "geometric_and_intensity"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "aug_no_augmentation": 0.8656760454177856,
+  "aug_geometric_only": 0.8744893211584824,
+  "aug_geometric_and_intensity": 0.8697007756966811,
+  "tl_full_finetune_budget40": 0.7790612165744488,
+  "tl_frozen_backbone_budget40": 0.7567132757260249,
+  "tl_partial_finetune_budget40": 0.7708033002339877,
+  "tl_full_finetune_budget100": 0.8132051733823923,
+  "tl_frozen_backbone_budget100": 0.8324725948847257,
+  "tl_partial_finetune_budget100": 0.810270382807805,
+  "tl_full_finetune_budget250": 0.8423461409715506,
+  "tl_frozen_backbone_budget250": 0.8521865743857163,
+  "tl_partial_finetune_budget250": 0.8290425676565903,
+  "tl_full_finetune_budget500": 0.8651520564005926,
+  "tl_frozen_backbone_budget500": 0.8559220662483802,
+  "tl_partial_finetune_budget500": 0.855514645576477
+}

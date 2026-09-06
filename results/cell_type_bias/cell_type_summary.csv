@@ -1,0 +1,7 @@
+,n_cells_unet,n_cells_unet,fg_frac_unet,fg_frac_unet,n_cells_cp,n_cells_cp,fg_frac_cp,fg_frac_cp
+,mean,std,mean,std,mean,std,mean,std
+cell_type,,,,,,,,
+HEPG2,98.26,50.363,0.193,0.12,172.28,161.153,0.181,0.104
+HUVEC,73.11,23.642,0.107,0.034,75.66,27.782,0.106,0.037
+RPE,54.13,14.83,0.096,0.026,48.4,14.22,0.09,0.028
+U2OS,96.28,36.816,0.228,0.093,128.98,63.285,0.218,0.091

@@ -1,0 +1,11 @@
+Method,Year,F1@0.5,IoU,mAP,Type
+CellProfiler,2018,0.72,,,Published
+U-Net*,2015,0.84,,,Published
+StarDist,2018,0.83,,,Published
+Cellpose 2.0,2022,0.861,,,Published
+"Cellpose (ours, DSB2018 test)",2024,0.671,0.559,0.404,Ours
+"Cellpose (ours, DSB2018 full 670)",2024,0.888,0.677,0.449,Ours
+U-Net No Aug,2024,0.9604,0.8192,0.697,Ours
+U-Net Geo Aug,2024,0.9703,0.845,0.7525,Ours
+U-Net Geo+Int Aug,2024,0.9703,0.8315,0.7208,Ours
+U-Net Full FT (500),2024,0.9703,0.8491,0.7594,Ours
