@@ -70,7 +70,10 @@ def iou_np(pred, target):
 def main():
     all_ids = sorted([d.name for d in DSB_DIR.iterdir() if d.is_dir()])
     random.seed(SEED); random.shuffle(all_ids)
-    print(f"Total images: {len(all_ids)}")
+    n_train = int(0.70 * len(all_ids))
+    n_val = int(0.15 * len(all_ids))
+    test_ids = all_ids[n_train + n_val:]
+    print(f"Total images: {len(all_ids)}; reserved test images: {len(test_ids)}")
 
     models = {
         "U-Net (No Aug)":  "aug_no_augmentation",
@@ -80,7 +83,7 @@ def main():
     loaded_models = {k: load_model(v) for k, v in models.items()}
 
     records = []
-    for img_id in tqdm(all_ids, desc="Analysing density vs performance"):
+    for img_id in tqdm(test_ids, desc="Analysing density vs performance"):
         img_path  = list((DSB_DIR / img_id / "images").glob("*.png"))[0]
         mask_dir  = DSB_DIR / img_id / "masks"
 
@@ -107,17 +110,47 @@ def main():
     df.to_csv(RESULT_DIR / "density_performance.csv", index=False)
 
     # Bin by cell count
-    df["density_bin"] = pd.cut(df["n_gt_cells"],
-                                bins=[0, 5, 15, 30, 50, 100, 500],
-                                labels=["1-5","6-15","16-30","31-50","51-100","100+"])
+    bin_labels = ["1-5", "6-15", "16-30", "31-50", "51-100", "100+"]
+    df["density_bin"] = pd.cut(
+        df["n_gt_cells"],
+        bins=[0, 5, 15, 30, 50, 100, np.inf],
+        labels=bin_labels,
+    )
+
+    summary = {
+        "split_seed": SEED,
+        "n_test_images": len(test_ids),
+        "models": {},
+    }
 
     print("\n===== DENSITY VS PERFORMANCE =====")
-    for model_name in loaded_models.keys():
+    for model_name, model_id in models.items():
         col = f"iou_{model_name}"
         corr, pval = stats.pearsonr(df["n_gt_cells"], df[col])
+        fisher_z = np.arctanh(corr)
+        fisher_se = 1.0 / np.sqrt(len(df) - 3)
+        ci_low, ci_high = np.tanh(
+            [fisher_z - 1.96 * fisher_se, fisher_z + 1.96 * fisher_se]
+        )
+        grouped = df.groupby("density_bin", observed=False)[col]
+        summary["models"][model_id] = {
+            "pearson_r": float(corr),
+            "p_value": float(pval),
+            "fisher_ci95": [float(ci_low), float(ci_high)],
+            "bin_mean_iou": {
+                label: float(grouped.mean().loc[label]) for label in bin_labels
+            },
+            "bin_counts": {
+                label: int(grouped.count().loc[label]) for label in bin_labels
+            },
+        }
         print(f"\n{model_name}:")
         print(f"  Pearson r={corr:.3f}, p={pval:.4f}")
-        print(df.groupby("density_bin")[col].mean().round(4))
+        print(grouped.mean().round(4))
+
+    (RESULT_DIR / "density_summary.json").write_text(
+        json.dumps(summary, indent=2), encoding="utf-8"
+    )
 
     # Plot
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))

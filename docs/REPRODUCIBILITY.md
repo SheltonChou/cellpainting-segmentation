@@ -148,10 +148,28 @@ The command writes:
 ## 9. Figures and final consistency check
 
 ```bash
+python scripts/paper_result_figures.py
 python scripts/final_visualisation.py
 python scripts/final_plots.py
 python scripts/verify_results.py
 ```
+
+`paper_result_figures.py` recreates the Route B AP threshold plot, transfer
+learning mAP plot and fixed test set density plot directly from the final
+archived evaluation. The two broader plotting scripts retain additional
+diagnostic and earlier project figures.
+
+## 10. Density analysis
+
+```bash
+python scripts/density_vs_performance.py
+```
+
+This command reconstructs the seed 42 split and evaluates only the reserved
+101 image test set. It writes the image level table and Pearson correlation
+summary to `results/density_analysis/`. The density bins are 1-5, 6-15, 16-30,
+31-50, 51-100 and 100+ nuclei. The final paper figure can then be recreated
+from the Route B image level metrics with `paper_result_figures.py`.
 
 Do not overwrite the archived results until a complete run has finished. For a
 new replication, point `CELLPAINT_RESULTS_DIR` to a new directory and retain the

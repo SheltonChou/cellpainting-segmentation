@@ -23,6 +23,7 @@
 | `statistical_tests.py` | Paired Wilcoxon comparisons | archived JSON from repeated runs | `results/statistical_tests.json` |
 | `final_visualisation.py` | Main plots from archived summaries | archived results | `results/visualisations/` |
 | `final_plots.py` | Additional test and failure plots | archived results, DSB2018, checkpoint | `results/visualisations/` |
+| `paper_result_figures.py` | Final AP threshold, transfer learning and test density figures | final Route B files | `results/visualisations/` |
 | `compute_f1_full.py` | Earlier binary/threshold metric calculation | DSB2018, checkpoints | `results/full_metrics.json` |
 | `compute_map_full.py` | Earlier AP calculation | DSB2018, checkpoints | `results/map_results_full.json` |
 | `compute_cellpose_map.py` | Cellpose AP extension | DSB2018 | baseline result files |

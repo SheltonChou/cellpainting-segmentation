@@ -51,3 +51,11 @@ Archived validation IoU values:
 
 These values are descriptive records of the saved run. Claims about the final test
 results should be checked against the Route B instance outputs above.
+
+## Density analysis
+
+The density analysis uses the same 101 test images as the final Route B
+evaluation. For geometric augmentation, the correlation between ground truth
+nuclei count and binary IoU is -0.2453 (p = 0.0134; Fisher 95% interval -0.4206
+to -0.0524). The image level record and the six bin summaries are stored in
+`results/density_analysis/`.

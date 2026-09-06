@@ -42,6 +42,7 @@ checking the final report.
 ├── data/                         # local data only; ignored by Git
 ├── docs/
 │   ├── DATA.md
+│   ├── PAPER_TO_CODE.md
 │   ├── REPRODUCIBILITY.md
 │   ├── RESULTS.md
 │   └── SCRIPT_INDEX.md
@@ -59,9 +60,10 @@ checking the final report.
 
 ## Quick verification without data or a GPU
 
-This checks that the archived tables are internally consistent, that all
-configurations repeated with multiple seeds contain eight observations, and that the seed list in
-the executable script is the same as the documented list.
+This checks that the archived tables are internally consistent, that all 17
+final models use the same 101 test images, that every repeated configuration
+contains eight observations and that the executable seed list matches the
+documented list.
 
 ```bash
 git clone https://github.com/SheltonChou/cellpainting-segmentation.git
@@ -112,6 +114,9 @@ export CELLPAINT_RESULTS_DIR=/absolute/path/to/results
 export CELLPAINT_CHECKPOINT_DIR=/absolute/path/to/checkpoints
 ```
 
+The complete correspondence between the dissertation and the repository is in
+[`docs/PAPER_TO_CODE.md`](docs/PAPER_TO_CODE.md).
+
 ## Reproduction levels
 
 ### 1. Audit the reported results
@@ -119,7 +124,7 @@ export CELLPAINT_CHECKPOINT_DIR=/absolute/path/to/checkpoints
 ```bash
 python scripts/verify_results.py
 python scripts/statistical_tests.py
-python scripts/final_visualisation.py
+python scripts/paper_result_figures.py
 ```
 
 The first command uses only the Python standard library. The other two recreate
@@ -143,9 +148,9 @@ report under `results/routeB_instance_eval/`.
 
 ### 3. Retrain the experiments
 
-The full order and the input/output dependency of each command are documented
+The full order and the input and output dependency of each command are documented
 in [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md). The eight seeds used for repeated runs
-seeds are:
+are:
 
 ```text
 42, 123, 456, 789, 1024, 2048, 4096, 8192
