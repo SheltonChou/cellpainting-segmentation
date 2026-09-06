@@ -8,8 +8,8 @@ The study compares three ways to improve nucleus segmentation when labelled
 images are limited:
 
 1. geometric and intensity augmentation;
-2. transfer learning at several labelled-set sizes; and
-3. pseudo-labelling across the DSB2018-to-RxRx1 domain shift.
+2. transfer learning with several quantities of labelled data; and
+3. pseudo-labelling across the domain shift from DSB2018 to RxRx1.
 
 The final evaluation reports binary mask IoU, instance F1 after Hungarian
 matching, and ranked mask AP over IoU thresholds 0.50-0.95. The archived result
@@ -26,7 +26,7 @@ tables used in the report are included under `results/`.
 | Frozen encoder, full labelled split | 0.377 |
 | Partial fine-tuning, full labelled split | 0.382 |
 
-The authoritative final instance-level table is
+The authoritative table for the final instance evaluation is
 `results/routeB_instance_eval/routeB_summary.csv`. Older intermediate metric
 files are retained as experiment records but should not replace that table when
 checking the final report.
@@ -60,7 +60,7 @@ checking the final report.
 ## Quick verification without data or a GPU
 
 This checks that the archived tables are internally consistent, that all
-multi-seed configurations contain eight observations, and that the seed list in
+configurations repeated with multiple seeds contain eight observations, and that the seed list in
 the executable script is the same as the documented list.
 
 ```bash
@@ -72,7 +72,7 @@ python scripts/verify_results.py
 Expected final line:
 
 ```text
-All archived-result checks passed.
+All archived result checks passed.
 ```
 
 ## Environment setup
@@ -102,7 +102,7 @@ Then run:
 python scripts/check_data.py
 ```
 
-The default paths are repository-relative. They can be overridden without
+The default paths are defined relative to the repository. They can be overridden without
 editing source code:
 
 ```bash
@@ -125,7 +125,7 @@ python scripts/final_visualisation.py
 The first command uses only the Python standard library. The other two recreate
 the statistical summary and main result plots from archived small result files.
 
-### 2. Re-evaluate saved checkpoints
+### 2. Evaluate saved checkpoints again
 
 Place checkpoint files in `results/checkpoints/`, then run:
 
@@ -138,13 +138,13 @@ python scripts/routeB_instance_eval.py \
   --bootstrap-seed 20260831
 ```
 
-This recreates the final instance-level CSV, JSON, per-image metrics and text
+This recreates the final instance CSV, JSON, metrics for each image and text
 report under `results/routeB_instance_eval/`.
 
 ### 3. Retrain the experiments
 
 The full order and the input/output dependency of each command are documented
-in [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md). The eight repeated-run
+in [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md). The eight seeds used for repeated runs
 seeds are:
 
 ```text
@@ -157,7 +157,7 @@ Exact floating-point equality across different GPU models, CUDA versions and
 operating systems is not expected; the archived values are the reference
 record.
 
-A file-by-file description is available in
+A description of every file is available in
 [`docs/SCRIPT_INDEX.md`](docs/SCRIPT_INDEX.md).
 
 ## Large files

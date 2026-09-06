@@ -115,13 +115,12 @@ def main() -> int:
         print(f"CHECK FAILED: {exc}", file=sys.stderr)
         return 1
 
-    print(f"Verified {repeated} eight-seed configurations.")
+    print(f"Verified {repeated} configurations, each with eight seeds.")
     print(f"Verified {route_b} final Route B mAP values on 101 test images.")
-    print(f"Verified {volumes} pseudo-label volume records.")
-    print("All archived-result checks passed.")
+    print(f"Verified {volumes} pseudo label volume records.")
+    print("All archived result checks passed.")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

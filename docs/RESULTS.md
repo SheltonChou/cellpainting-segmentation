@@ -1,8 +1,8 @@
 # Result record
 
-## Final test-set metrics
+## Final test metrics
 
-The final evaluation contains 101 held-out DSB2018 images. Values below come
+The final evaluation contains 101 DSB2018 images reserved for testing. Values below come
 from `results/routeB_instance_eval/routeB_summary.csv`.
 
 | Model | Binary IoU | F1@0.70 | mAP 0.50-0.95 |
@@ -29,9 +29,9 @@ The filenames use `budget500` for the full labelled split; this is a historical
 configuration name rather than a claim that 500 labelled training images were
 used.
 
-## Repeated-run comparisons
+## Comparisons across repeated runs
 
-Each augmentation and transfer-learning entry in
+Each augmentation and transfer learning entry in
 `results/multi_seed/multi_seed_results.json` contains eight validation IoU
 values in the documented seed order. The selected paired Wilcoxon results are
 stored in `results/statistical_tests.json`.
@@ -49,6 +49,5 @@ Archived validation IoU values:
 | 400 | 0.8638 |
 | 500 | 0.8632 |
 
-These values are descriptive records of the saved run. The final test-set
-claims should be checked against the Route B instance-level outputs above.
-
+These values are descriptive records of the saved run. Claims about the final test
+results should be checked against the Route B instance outputs above.

@@ -21,12 +21,12 @@ Expected structure:
 
 ```text
 data/dsb2018/stage1_train/
-└── <image-id>/
-    ├── images/<image-id>.png
-    └── masks/<instance-id>.png
+└── <image_id>/
+    ├── images/<image_id>.png
+    └── masks/<instance_id>.png
 ```
 
-The full labelled archive contains 670 image-ID directories. The scripts sort
+The full labelled archive contains 670 image directories. The scripts sort
 the IDs before applying seeded shuffling.
 
 The `stage1_train.zip` archive available during the project had SHA-256 digest
@@ -36,11 +36,9 @@ The `stage1_train.zip` archive available during the project had SHA-256 digest
 
 Sources:
 
-- [RxRx1 dataset page](https://www.rxrx.ai/rxrx1)
 - [Official RxRx1 README](https://github.com/recursionpharma/rxrx-datasets/tree/trunk/rxrx1)
-- [RxRx1 dataset licence](https://www.rxrx.ai/recursion-dataset-license)
 
-The image archive is approximately 45-47 GB. The released data are licensed
+The image archive is approximately 45 to 47 GB. The released data are licensed
 CC-BY-NC-SA 4.0; follow the provider's current licence terms.
 
 ```bash
@@ -91,7 +89,7 @@ python scripts/check_data.py
 ```
 
 This checks the expected directory structure, counts DSB image IDs, and confirms
-that RxRx1 contains metadata and at least 500 channel-1 images.
+that RxRx1 contains metadata and at least 500 images from channel 1.
 
 Downloaded archive digests can be checked with:
 
