@@ -30,7 +30,7 @@ MODEL_LABELS = {
 }
 TL_LABELS = {
     "full_finetune": "Full fine-tuning",
-    "frozen_backbone": "Frozen backbone",
+    "frozen_backbone": "Frozen encoder",
     "partial_finetune": "Partial fine-tuning",
 }
 COLORS = ["#1F77B4", "#FF7F0E", "#2CA02C", "#D62728"]

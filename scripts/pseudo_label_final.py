@@ -292,7 +292,7 @@ def main():
     axes[0].set_title("Pseudo-label Performance across Rounds"); axes[0].legend()
     axes[0].grid(True, alpha=0.3)
     axes[1].set_xlabel("Retraining Round"); axes[1].set_ylabel("Agreement Rate (IoU)")
-    axes[1].set_title("Label Quality Monitoring (Confirmation Bias)"); axes[1].legend()
+    axes[1].set_title("In-domain Agreement Monitoring"); axes[1].legend()
     axes[1].grid(True, alpha=0.3)
     plt.tight_layout()
     plt.savefig(RESULTS_ROOT / "visualisations/pseudo_label_final.png", dpi=150)

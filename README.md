@@ -12,8 +12,8 @@ images are limited:
 3. pseudo-labelling across the domain shift from DSB2018 to RxRx1.
 
 The final evaluation reports binary mask IoU, instance F1 after Hungarian
-matching, and ranked mask AP over IoU thresholds 0.50-0.95. The archived result
-tables used in the report are included under `results/`.
+matching and ranked mask AP over IoU thresholds 0.50-0.95. The result tables
+used in the dissertation are archived under `results/`.
 
 ## Key archived results
 
@@ -104,8 +104,8 @@ Then run:
 python scripts/check_data.py
 ```
 
-The default paths are defined relative to the repository. They can be overridden without
-editing source code:
+The default paths are defined relative to the repository. They can be
+overridden without editing the source code:
 
 ```bash
 export DSB2018_DIR=/absolute/path/to/stage1_train
@@ -128,7 +128,7 @@ python scripts/paper_result_figures.py
 ```
 
 The first command uses only the Python standard library. The other two recreate
-the statistical summary and main result plots from archived small result files.
+the statistical summary and main result plots from archived result files.
 
 ### 2. Evaluate saved checkpoints again
 
@@ -143,14 +143,14 @@ python scripts/routeB_instance_eval.py \
   --bootstrap-seed 20260831
 ```
 
-This recreates the final instance CSV, JSON, metrics for each image and text
-report under `results/routeB_instance_eval/`.
+This recreates the final summary CSV, JSON record, metrics for individual
+images and text report under `results/routeB_instance_eval/`.
 
 ### 3. Retrain the experiments
 
-The full order and the input and output dependency of each command are documented
-in [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md). The eight seeds used for repeated runs
-are:
+The execution order and file dependencies are documented in
+[`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md). The eight seeds used for
+repeated runs are:
 
 ```text
 42, 123, 456, 789, 1024, 2048, 4096, 8192

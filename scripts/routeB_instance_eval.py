@@ -4,8 +4,8 @@ Route B evaluation for Shuaiyu Zhou MSc project.
 
 Purpose
 -------
-Re-evaluate the existing DSB2018 test-set checkpoints with genuine
-instance-level metrics, without retraining:
+Evaluate the existing DSB2018 test checkpoints with the final instance metric
+definitions, without retraining:
 
 1) threshold sigmoid foreground probability at 0.5;
 2) recover predicted instances by 8-connected components;
@@ -14,10 +14,10 @@ instance-level metrics, without retraining:
 4) use Hungarian bipartite matching for instance precision/recall/F1;
 5) compute single-class COCO-style mask AP from ranked instance confidences
    at IoU thresholds 0.50:0.05:0.95 (101-point interpolated AP);
-6) compute paired image-bootstrap uncertainty for selected comparisons.
+6) compute paired bootstrap uncertainty from test images for selected comparisons.
 
-This script deliberately does NOT call the old "mAP"/"F1" implementation.
-It uses the original individual DSB2018 masks as ground-truth instances.
+This script uses the original individual DSB2018 masks as ground-truth
+instances. Earlier metric files are retained only as records of the project.
 
 Run from the repository root, e.g.
     python scripts/routeB_instance_eval.py --scope all

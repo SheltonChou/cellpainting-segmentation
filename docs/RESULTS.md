@@ -2,8 +2,8 @@
 
 ## Final test metrics
 
-The final evaluation contains 101 DSB2018 images reserved for testing. Values below come
-from `results/routeB_instance_eval/routeB_summary.csv`.
+The final evaluation contains 101 DSB2018 images reserved for testing. The
+values below come from `results/routeB_instance_eval/routeB_summary.csv`.
 
 | Model | Binary IoU | F1@0.70 | mAP 0.50-0.95 |
 |---|---:|---:|---:|
@@ -49,13 +49,13 @@ Archived validation IoU values:
 | 400 | 0.8638 |
 | 500 | 0.8632 |
 
-These values are descriptive records of the saved run. Claims about the final test
-results should be checked against the Route B instance outputs above.
+These values are descriptive records of the saved run. Claims about the final
+test results should be checked against the Route B instance outputs above.
 
 ## Density analysis
 
 The density analysis uses the same 101 test images as the final Route B
 evaluation. For geometric augmentation, the correlation between ground truth
 nuclei count and binary IoU is -0.2453 (p = 0.0134; Fisher 95% interval -0.4206
-to -0.0524). The image level record and the six bin summaries are stored in
-`results/density_analysis/`.
+to -0.0524). The record for individual images and the six bin summaries are
+stored in `results/density_analysis/`.

@@ -256,9 +256,9 @@ def main() -> int:
 
     print(f"Verified {repeated} configurations, each with eight seeds.")
     print(f"Verified all reported metrics for {route_b} final models on 101 common test images.")
-    print(f"Verified {volumes} pseudo label volume records.")
+    print(f"Verified {volumes} pseudo-label volume records.")
     print(f"Verified {datasets} dataset and baseline records.")
-    print(f"Verified {tests} paired Wilcoxon comparisons and {thresholds} pseudo label thresholds.")
+    print(f"Verified {tests} paired Wilcoxon comparisons and {thresholds} pseudo-label thresholds.")
     print(f"Verified density analysis on {density} reserved test images.")
     print("All archived result checks passed.")
     return 0

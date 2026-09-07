@@ -4,7 +4,7 @@
 |---|---|---|---|
 | `project_paths.py` | Central paths relative to the repository and overrides from environment variables | environment | path objects |
 | `check_data.py` | Validate DSB2018 and RxRx1 layout | raw data | terminal report |
-| `verify_results.py` | Audit archived seeds and headline result values | small JSON/CSV files | terminal report |
+| `verify_results.py` | Audit final tables, seeds, statistical records and density analysis | small JSON/CSV files | terminal report |
 | `rxrx1_analysis.py` | Summarise RxRx1 metadata and prepare the stratified record | RxRx1 metadata | `results/rxrx1_analysis/` |
 | `baseline_cellpose.py` | Original Cellpose baseline workflow | DSB2018 | `results/baseline/` |
 | `baseline_cellpose_full.py` | Full DSB2018 Cellpose baseline | DSB2018 | `results/baseline/` |
@@ -16,7 +16,7 @@
 | `pseudo_label_final.py` | Confidence thresholds and iterative rounds | DSB2018, RxRx1, geometric checkpoint | `results/pseudo_label_final/` |
 | `combined_experiment.py` | Augmentation plus pseudo-label experiments | both datasets, checkpoints | `results/combined/` |
 | `routeB_instance_eval.py` | Final checkpoint evaluation for individual objects and bootstrap analysis | DSB2018, checkpoints | `results/routeB_instance_eval/` |
-| `density_vs_performance.py` | Analysis of density and error on reserved data | DSB2018, checkpoint | `results/density_analysis/` |
+| `density_vs_performance.py` | Analysis of density and error on the fixed test set | DSB2018, three checkpoints | `results/density_analysis/` |
 | `channel_intensity_analysis.py` | Diagnostic analysis of intensity in RxRx1 channels | RxRx1 | `results/channel_analysis/` |
 | `aug_feature_impact.py` | Diagnostic analysis of feature changes under augmentation | RxRx1 | `results/aug_feature_impact/` |
 | `cell_type_bias_analysis.py` | Diagnostic analysis of cell type and density | RxRx1, checkpoint | `results/cell_type_bias/` |
@@ -32,6 +32,6 @@
 | `summary_table.py` | Consolidated legacy result table | archived results | `results/full_results_table.csv` |
 | `evaluate_combined.py` | Earlier check across combined checkpoints | DSB2018, checkpoints | `results/combined_eval_unified.json` |
 
-For the final reported results for individual objects, use `routeB_instance_eval.py` and
-its outputs. The earlier metric scripts are retained to preserve the sequence of
-the project record.
+For the final reported results for individual objects, use
+`routeB_instance_eval.py` and its outputs. The earlier metric scripts are
+retained to preserve the sequence of the project record.

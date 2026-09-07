@@ -50,7 +50,7 @@ python scripts/train_unet.py
 
 This trains the augmentation and transfer learning configurations and writes
 histories, summary JSON files and checkpoints. The network is a U-Net with a
-ResNet-50 encoder, one input channel and one output class. Images and masks are
+ResNet50 encoder, one input channel and one output class. Images and masks are
 resized to 256 x 256. The loss is binary cross-entropy plus Dice loss.
 
 ## 3. Individual augmentation ablation
@@ -75,9 +75,9 @@ Seed order:
 ```
 
 The script reruns augmentation and transfer learning configurations. It uses a
-70/15/15 split after shuffling with the selected seed. Within a seed, configurations use
-the same shuffled partition and labelled subset. Across seeds, the partition and
-subset change. The resulting standard deviations therefore combine data
+70/15/15 split after shuffling with the selected seed. Within each run, all
+configurations use the same partition and labelled subset. The partition and
+subset change between seeds, so the resulting standard deviations combine data
 sampling and optimisation variation.
 
 Output: `results/multi_seed/multi_seed_results.json`.
@@ -89,8 +89,8 @@ python scripts/statistical_tests.py
 ```
 
 The paired Wilcoxon tests operate on the eight validation IoU values in the same
-seed order. With eight paired differences that are not zero, the minimum attainable
-exact p-value for a two sided test is 0.0078125.
+seed order. With eight nonzero paired differences, the minimum attainable exact
+p-value for a two-sided test is 0.0078125.
 
 ## 6. Pseudo-labelling
 
@@ -112,9 +112,9 @@ geometric augmentation, so `results/checkpoints/aug_geometric_only.pth` must exi
 python scripts/combined_experiment.py
 ```
 
-This compares geometric augmentation alone with configurations that add pseudo labels,
-with and without intensity augmentation. It requires the geometric
-checkpoint and the archived pseudo-label selection record under
+This compares geometric augmentation alone with configurations that add
+pseudo-labels, with and without intensity augmentation. It requires the
+geometric checkpoint and the archived pseudo-label selection record under
 `results/pseudo_label/`.
 
 ## 8. Final instance evaluation
@@ -133,10 +133,10 @@ Evaluation details:
 - fixed DSB split seed: 42;
 - foreground probability threshold: 0.5;
 - predicted instances: 8-connected components;
-- matching: one to one Hungarian assignment;
+- matching: one-to-one Hungarian assignment;
 - F1 IoU thresholds: 0.50-0.95;
 - ranked mask AP: interpolated precision and recall at 101 points;
-- uncertainty: 2,000 paired bootstrap resamples at image level.
+- uncertainty: 2,000 paired bootstrap resamples of test images.
 
 The command writes:
 
@@ -155,8 +155,8 @@ python scripts/verify_results.py
 ```
 
 `paper_result_figures.py` recreates the Route B AP threshold plot, transfer
-learning mAP plot and fixed test set density plot directly from the final
-archived evaluation. The two broader plotting scripts retain additional
+learning mAP plot and density plot for the fixed test set directly from the
+final archived evaluation. The two broader plotting scripts retain additional
 diagnostic and earlier project figures.
 
 ## 10. Density analysis
@@ -166,10 +166,11 @@ python scripts/density_vs_performance.py
 ```
 
 This command reconstructs the seed 42 split and evaluates only the reserved
-101 image test set. It writes the image level table and Pearson correlation
-summary to `results/density_analysis/`. The density bins are 1-5, 6-15, 16-30,
-31-50, 51-100 and 100+ nuclei. The final paper figure can then be recreated
-from the Route B image level metrics with `paper_result_figures.py`.
+101 image test set. It writes a table with one row per image and a Pearson
+correlation summary to `results/density_analysis/`. The density bins are 1-5,
+6-15, 16-30, 31-50, 51-100 and 100+ nuclei. The final paper figure can then be
+recreated from the Route B metrics for individual images with
+`paper_result_figures.py`.
 
 Do not overwrite the archived results until a complete run has finished. For a
 new replication, point `CELLPAINT_RESULTS_DIR` to a new directory and retain the
